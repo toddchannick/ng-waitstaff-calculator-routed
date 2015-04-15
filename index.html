@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="angular/angular.min.js"></script>
+	<script src="angular/angular.min.js.map"></script>
+	<script src="js/angular-ui-router.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+	<script src="app.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Waitstaff Calculator</title>
+</head>
+
+<body ng-app="myApp">
+	
+	<header>
+		<div id="title"><a href="#/details">Waitstaff Calculator</a><span id="subscript">v 2.0</span></div>
+	</header>
+	<div class="description">now with ng-routes.</div>
+
+	
+
+	<div id="wrapper">
+		<div class="nav" ng-controller="navCtrl">
+			<ul>
+				<a ng-class="classActive('/details')" href="#/details"><div class="tab" ng-class="classActive('/details')"><li>Meal Details</li></div></a>
+				<a ng-class="classActive('/charges')" href="#/charges"><div class="tab" ng-class="classActive('/charges')"><li>Charge Overview</li></div></a>
+				<a ng-class="classActive('/earnings')" href="#/earnings"><div class="tab" ng-class="classActive('/earnings')"><li>Earnings Info</li></div></a>
+			</ul>
+		</div>
+				<div class="content" ng-view></div>
+
+		<div class="lower" ng-controller="resetCtrl">
+			<button class="reset-all hvr-underline-from-left" ng-click="resetAll()">Reset All</button>
+		</div>
+
+		<footer>
+			<span id="footer">Created by Todd Channick for Thinkful.</span>
+		</footer>
+
+	</div>
+
+</body>
+
+</html>

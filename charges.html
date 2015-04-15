@@ -1,0 +1,15 @@
+<div class="table customer-charges">
+	<div class="div-header">
+		<span class="navigate">
+			Overview for <span id="blue">Meal {{mealCount}}</span>
+			<span ng-click="back()" id="back">&lt;</span>
+			<span id="forward" ng-click="forward()">&gt;</span>
+		</span> 
+	</div>
+	<div class="charges">
+		<p><span id="blue">Subtotal: </span><span  ng-repeat="meal in meals" class="results" ng-show="$index==(mealCount-1)">{{meal.subtotal | currency}}</span></p>
+		<p><span id="blue">Tip: </span><span  ng-repeat="meal in meals" class="results" ng-show="$index==(mealCount-1)">{{meal.tip | currency}}</span></p>
+		<hr>
+		<p><span id="blue">Total: </span><span  ng-repeat="meal in meals" class="results" ng-show="$index==(mealCount-1)">{{meal.total | currency}}</span></p>
+	</div>
+</div>

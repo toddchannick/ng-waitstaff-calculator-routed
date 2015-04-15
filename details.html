@@ -1,0 +1,28 @@
+
+<div class="table meal-details">
+	<div id="details-bg">
+		<div class="div-header">Enter details for <span id="blue">Meal {{mealCount}}</span>:</div>
+			<div class="details-form">
+				<form name="mealForm" id="mealForm" class="details" ng-submit="addTransaction(); results=true; counter=true">
+					<label for="price">
+						<span>Base Meal Price: $</span>
+					</label>
+						<input type="number" id="price" name="price" ng-model="price" min="0" step=".01" placeholder="0.00" required/>
+					<br>
+					<label for="tax">
+						<span>Tax Rate: %</span>
+					</label>
+						<input type="number" id="tax" name="tax" ng-model="tax" placeholder="0.00" min="0" max="100" step=".01" required/>
+					<br>
+					<label for="tip">
+						<span>Tip Percentage: %</span>
+					</label>
+						<input type="number" id="tip" name="tip" ng-model="tip" placeholder="0.00" min="0" max="100" step=".01" required/>
+				<div id="details-bottom">
+					<button type="submit" class="hvr-underline-from-left">Add Meal</button>
+					<button type="reset" ng-click="cancelForm()" class="hvr-underline-from-left">Cancel</button>
+				</form>
+				</div>
+			</div>
+		</div>
+</div>
