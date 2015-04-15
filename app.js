@@ -88,6 +88,7 @@ $scope.addTransaction = function(){
 	var tax = parseFloat($scope.tax);
 	var tip = parseFloat($scope.tip);
 
+	//COLLECTING DATA FROM CURRENT MEAL PRIOR TO SENDING TO SERVICE ARRAY//
 	$scope.currentSubtotal = price + (price*(tax/100));
 	$scope.currentTip = $scope.currentSubtotal*(tip/100);
 	$scope.currentTotal = $scope.currentSubtotal + $scope.currentTip;
